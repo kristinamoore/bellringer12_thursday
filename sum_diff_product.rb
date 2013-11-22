@@ -1,14 +1,38 @@
-def method 
+class Numbers
+        def initialize(first_number, second_number)
+                @first_number  = first_number
+                @second_number = second_number
+        end
 
-puts"Give me one number"
+        attr_accessor 'first_number', 'second_number'
 
-nom121 = gets.chomp.to_i
- puts"Give me the second number"
-nom50 = gets.chomp.to_i
+        def sum
+                @first_number + @second_number
+        end
 
-puts nom121+nom50
-puts nom121-nom50
-puts nom121*nom50
+        def diff
+                @first_number - @second_number
+        end
+
+        def product
+                @first_number * @second_number
+        end
+
 end
 
-method
+
+puts "enter first number"
+first_number = gets.chomp.to_i
+
+puts "enter second number"
+second_number = gets.chomp.to_i
+
+result = Numbers.new first_number, second_number
+
+puts ""
+
+puts result.sum
+
+puts result.diff
+
+puts result.product
